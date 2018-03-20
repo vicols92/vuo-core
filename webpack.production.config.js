@@ -4,7 +4,6 @@ const res = p => path.resolve(__dirname, p);
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-
 module.exports = {
   entry: [
     './src/app.js',
@@ -57,7 +56,6 @@ module.exports = {
     }, // close module
     plugins: [
 			new ExtractTextPlugin("styles.css"),
-
 			new UglifyJsPlugin()
     ],
     // important watch stays here

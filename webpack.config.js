@@ -4,7 +4,6 @@ var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const res = p => path.resolve(__dirname, p);
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-
 module.exports = {
   entry: [
     './src/app.js',
@@ -15,6 +14,7 @@ module.exports = {
     publicPath: '/wp-content/themes/vuo-core/public/',
     filename: "./bundled.js"
   },
+		devtool: 'inline-source-map',
     module: {
       loaders: [
 				{
