@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 const res = p => path.resolve(__dirname, p);
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 
 module.exports = {
@@ -14,7 +15,6 @@ module.exports = {
     publicPath: '/wp-content/themes/vuo-core/public/',
     filename: "./bundled.js"
   },
-
     module: {
       loaders: [
 				{
@@ -55,9 +55,10 @@ module.exports = {
 				},
       ] // close loaders
     }, // close module
-
     plugins: [
 			new ExtractTextPlugin("styles.css"),
+
+			new UglifyJsPlugin()
     ],
     // important watch stays here
   };
