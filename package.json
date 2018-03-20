@@ -1,0 +1,12 @@
+{
+  "name": "vuo-core",
+  "version": "1.0.0",
+  "description": "core theme",
+  "main": "index.js",
+  "repository": "https://github.com/vicols92/vuo-core",
+  "author": "victor olsson",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.1.1"
+  }
+}
