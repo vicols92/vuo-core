@@ -22,6 +22,9 @@ module.exports = {
 						fallback: 'style-loader',
 						use: [{
 							loader: 'css-loader',
+								options: {
+									minimize: true
+								}
 						},
 						{
 							loader: 'sass-loader',

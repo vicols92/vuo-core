@@ -14,7 +14,6 @@ module.exports = {
     publicPath: '/wp-content/themes/vuo-core/public/',
     filename: "./bundled.js"
   },
-		devtool: 'inline-source-map',
     module: {
       loaders: [
 				{
