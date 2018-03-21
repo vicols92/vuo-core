@@ -3,6 +3,6 @@
 
 this is my core theme for wordpress.
 
-*it uses*
+**it uses**
 * webpack
 * timber
