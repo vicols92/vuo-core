@@ -18,10 +18,59 @@
             "layouts": {
                 "5ab0f1e10a006": {
                     "key": "5ab0f1e10a006",
-                    "name": "",
-                    "label": "",
+                    "name": "demo",
+                    "label": "Demo",
                     "display": "block",
-                    "sub_fields": [],
+                    "sub_fields": [
+                        {
+                            "key": "field_5ab8ba1ad7f11",
+                            "label": "text",
+                            "name": "text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "5ab8bd199476c": {
+                    "key": "5ab8bd199476c",
+                    "name": "text",
+                    "label": "text",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ab8bd1c9476d",
+                            "label": "text",
+                            "name": "texttext",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
                     "min": "",
                     "max": ""
                 }
@@ -36,7 +85,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "page"
             }
         ]
     ],
@@ -45,8 +94,11 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content",
+        "comments"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1521545701
+    "modified": 1522056480
 }

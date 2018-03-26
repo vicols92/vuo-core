@@ -1,0 +1,37 @@
+#progressbar2 {
+  position:fixed;
+	width: 100%;
+	height: 5px;
+	display: block;
+	/* Important Thing */
+	-webkit-appearance: none;
+	border: none;
+	opacity: 1;
+	transition: all 1s;
+	top: 0;
+	z-index: 100;
+}
+
+.customize-support {
+	#progressbar2 {
+		top: 32px;
+	}
+}
+
+/* All good till now. Now we'll style the background */
+progress::-webkit-progress-bar {
+	// background: $cloud;
+	background: none;
+	// padding: 2px;
+}
+
+/* Now the value part */
+progress::-webkit-progress-value {
+	background-color: red;
+	/* Looks great, now animating it */
+}
+
+@-webkit-keyframes move {
+	0% {background-position: 0px 0px, 0 0, 0 0}
+	100% {background-position: -100px 0px, 0 0, 0 0}
+}

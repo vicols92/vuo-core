@@ -1,0 +1,8 @@
+
+{% for section in sections %}
+	<h2>hej</h2>
+  {% if (section.acf_fc_layout == 'demo') %}
+    {% include 'components/demo/demo.twig' %}
+
+  {% endif %}
+{% endfor %}

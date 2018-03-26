@@ -1,0 +1,30 @@
+<main class="wrapper" id="wrapper">
+	{% block before_menu %}
+
+	{% endblock %}
+
+	{% block menu %}
+		{% include 'components/progressbar/progressbar.twig' %}
+	{% endblock %}
+
+
+	{% block breadcrumbs %}
+	{% endblock %}
+
+	{% block before_content %}
+	{% endblock %}
+
+	<div class="content">
+		{% block content %}
+			{% include 'sections.twig' %}
+		{% endblock %}
+	</div>
+
+	{% block after_content %}
+	{% endblock %}
+
+	{% block footer %}
+
+	{% endblock %}
+	</main>
+</div>

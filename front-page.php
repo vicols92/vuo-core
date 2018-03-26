@@ -1,13 +1,12 @@
-<?php get_header(); ?>
+<?php
 
-<div class="grid-container">
-	<div class="grid-x">
-		<div class="cell">
-			<h2>hej</h2>
-			<p>Lorem ipsum</p>
-			<button type="button" name="button">Button text</button>
-		</div>
-	</div>
-</div>
+get_header();
 
-<?php get_footer(); ?>
+$context = Timber::get_context();
+$context['page'] = new TimberPost();
+$context['sections'] = get_field('sections');
+
+Timber::render( 'page.twig', $context );
+get_footer();
+
+?>

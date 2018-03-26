@@ -7,4 +7,6 @@ this is my core theme for wordpress.
 * webpack
 * timber
 
-> once you have a fresh install of wordpress, you will need ACF and Timber plugins to work with this theme
+> once you have a fresh install of wordpress, you will need ACF and Timber plugin to work with this theme
+
+*Important note, you have to create a static home page in wordpress*
