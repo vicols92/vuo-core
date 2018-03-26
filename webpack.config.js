@@ -4,6 +4,9 @@ var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const res = p => path.resolve(__dirname, p);
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+let theme = 'vuo-core';
+
+
 module.exports = {
   entry: [
     './src/app.js',
@@ -11,7 +14,7 @@ module.exports = {
   output: {
     path: __dirname + "/public/",
     // replace "theme name" with the name of your theme.
-    publicPath: '/wp-content/themes/vuo-core/public/',
+    publicPath: '/wp-content/themes/${theme}/public/',
     filename: "./bundled.js"
   },
     module: {
