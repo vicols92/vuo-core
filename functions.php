@@ -20,3 +20,9 @@ add_filter('upload_mimes', 'cc_mime_types');
 require_once 'includes/acf-options.php';
 require_once 'includes/custom-post-types.php';
 require_once 'includes/menus.php';
+
+function add_image_sizes() {
+	add_image_size( 'post-size', null, 500, false );
+	add_image_size( 'preview', null, 200, false );
+}
+add_action( 'after_setup_theme', 'add_image_sizes' );

@@ -1,0 +1,31 @@
+<div class="vuo-menu grid-container fluid">
+	<div class="grid-container">
+		<div class="grid-x">
+				<nav class="navigation">
+					<div class="menu-links">
+						<ul class="menu">
+							{% for item in main_menu.get_items %}
+								{% if item.get_children %}
+									<li class="has-sub-menu{{ item.classes|join(' ') }}">
+										<div class="link-wrap">
+											<a class="link" href="{{ item.get_link }}">{{ item.title }}</a>
+										</div>
+										<ul class="sub-menu">
+											<i class="fa fa-caret-up"></i>
+											{% for child in item.get_children %}
+												<li class="{{ child.classes|join(' ') }}">
+													<a href="{{ child.get_link }}">{{ child.title }}</a>
+												</li>
+											{% endfor %}
+										</ul>
+									</li>
+								{% else %}
+									<li class="{{ item.classes|join(' ') }}"><a href="{{ item.get_link }}">{{ item.title }}</a></li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</div>
+				</nav>
+		</div>
+	</div>
+</div>
