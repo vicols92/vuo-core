@@ -29,8 +29,10 @@ module.exports = {
 						{
 							loader: 'sass-loader',
 							options: {
-								data: '@import "variables"; @import "mixins";',
+								data: '@import "variables"; @import "mixins"; @import "~foundation-sites/scss/foundation";',
 								includePaths: [
+									res('node_modules'),
+									res('node_modules/foundation-sites/scss'),
 									res('src/scss')
 								]
 							}
