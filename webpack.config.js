@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const autoprefixer      = require('autoprefixer');
 const res = p => path.resolve(__dirname, p);
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -25,6 +26,13 @@ module.exports = {
 						fallback: 'style-loader',
 						use: [{
 							loader: 'css-loader',
+						},
+						{
+							loader: 'postcss-loader',
+							options: {
+								sourceMap: 'inline',
+								plugins: () => [autoprefixer('last 2 versions', 'IE 10')],
+							}
 						},
 						{
 							loader: 'sass-loader',
