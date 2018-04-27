@@ -35,6 +35,13 @@ module.exports = {
 							}
 						},
 						{
+							loader: 'postcss-loader',
+							options: {
+								sourceMap: 'inline',
+								plugins: () => [autoprefixer('last 2 versions', 'IE 10')],
+							}
+						},
+						{
 							loader: 'sass-loader',
 							options: {
 								data: '@import "variables"; @import "mixins"; @import "~foundation-sites/scss/foundation";',

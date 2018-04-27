@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+const autoprefixer      = require('autoprefixer');
 const res = p => path.resolve(__dirname, p);
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
@@ -27,6 +28,13 @@ module.exports = {
 								options: {
 									minimize: true
 								}
+						},
+						{
+							loader: 'postcss-loader',
+							options: {
+								sourceMap: 'inline',
+								plugins: () => [autoprefixer('last 2 versions', 'IE 10')],
+							}
 						},
 						{
 							loader: 'sass-loader',
