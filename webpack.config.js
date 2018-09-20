@@ -82,7 +82,7 @@ module.exports = {
     plugins: [
 			new ExtractTextPlugin("styles.css"),
       new BrowserSyncPlugin({
-          proxy: 'http://vuocore.test/',
+          proxy: 'http://localhost:8888/core/',
           files: [{
               match: [
                   '**/*.php',
